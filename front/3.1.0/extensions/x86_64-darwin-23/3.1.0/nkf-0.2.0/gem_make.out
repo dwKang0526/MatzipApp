@@ -1,0 +1,16 @@
+current directory: /Users/dawonkang/60.Study/reactnative-nestjs/MatzipApp/vendor/bundle/ruby/3.1.0/gems/nkf-0.2.0/ext/nkf
+/Users/dawonkang/.rbenv/versions/3.1.4/bin/ruby -I /Users/dawonkang/.rbenv/versions/3.1.4/lib/ruby/3.1.0 extconf.rb
+creating Makefile
+
+current directory: /Users/dawonkang/60.Study/reactnative-nestjs/MatzipApp/vendor/bundle/ruby/3.1.0/gems/nkf-0.2.0/ext/nkf
+make DESTDIR\= sitearchdir\=./.gem.20241030-4729-lnl0ta sitelibdir\=./.gem.20241030-4729-lnl0ta clean
+
+current directory: /Users/dawonkang/60.Study/reactnative-nestjs/MatzipApp/vendor/bundle/ruby/3.1.0/gems/nkf-0.2.0/ext/nkf
+make DESTDIR\= sitearchdir\=./.gem.20241030-4729-lnl0ta sitelibdir\=./.gem.20241030-4729-lnl0ta
+compiling nkf.c
+linking shared-object nkf.bundle
+ld: warning: ignoring duplicate libraries: '-lruby.3.1'
+
+current directory: /Users/dawonkang/60.Study/reactnative-nestjs/MatzipApp/vendor/bundle/ruby/3.1.0/gems/nkf-0.2.0/ext/nkf
+make DESTDIR\= sitearchdir\=./.gem.20241030-4729-lnl0ta sitelibdir\=./.gem.20241030-4729-lnl0ta install
+/usr/bin/install -c -m 0755 nkf.bundle ./.gem.20241030-4729-lnl0ta
