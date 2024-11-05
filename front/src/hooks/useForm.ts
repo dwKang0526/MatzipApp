@@ -29,6 +29,8 @@ function useForm<T>({initialValues, validate}: UseFormProps<T>) {
     const onChangeText = (text: string) => handleChangeText(name, text);
     const onBlur = () => handlerBlur(name);
 
+    // console.log(value);
+
     return {value, onChangeText, onBlur};
   };
 
