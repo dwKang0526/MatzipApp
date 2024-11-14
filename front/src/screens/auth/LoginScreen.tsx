@@ -4,9 +4,11 @@ import InputField from '../../components/InputField';
 import CustomButton from '../../components/CustomButton';
 import useForm from '../../hooks/useForm';
 import {validateLogin} from '../../utils';
+import useAuth from '../../hooks/queries/useAuth';
 
 function LoginScreen() {
   const passwordRef = useRef<TextInput | null>(null);
+  const {loginMutation} = useAuth();
   const login = useForm({
     initialValues: {
       email: '',
@@ -18,7 +20,8 @@ function LoginScreen() {
   // console.log('getTextInputProps TEST :: ', login.getTextInputProps('email'));
 
   const handleSubmit = () => {
-    console.log('values', login.values);
+    // console.log('values', login.values);
+    loginMutation.mutate(login.values);
   };
 
   return (

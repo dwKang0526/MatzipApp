@@ -4,10 +4,12 @@ import useForm from '../../hooks/useForm';
 import InputField from '../../components/InputField';
 import CustomButton from '../../components/CustomButton';
 import {validateSignUp} from '../../utils';
+import useAuth from '../../hooks/queries/useAuth';
 
 function SignUpScreen() {
   const passwordRef = useRef<TextInput | null>(null);
   const passwordConfirmRef = useRef<TextInput | null>(null);
+  const {signupMutation, loginMutation} = useAuth();
   const signUp = useForm({
     initialValues: {
       email: '',
@@ -18,7 +20,16 @@ function SignUpScreen() {
   });
 
   const handleSubmit = () => {
-    console.log('signUp.values', signUp.values);
+    // console.log('signUp.values', signUp.values);
+    // signUp.values는 passwordConfirm까지 포함하고 있기 때문에 passwordConfirm 제외하고 불러옴
+    const {email, password} = signUp.values;
+
+    signupMutation.mutate(
+      {email, password},
+      {
+        onSuccess: () => loginMutation.mutate({email, password}),
+      },
+    );
   };
 
   return (
